@@ -1,0 +1,20 @@
+.title {
+  display: flex;
+  justify-content: center;
+}
+.form-group .row {
+  display: flex;
+  margin: auto;
+}
+.tbl-dados img{
+  border-radius: 50px;
+}
+
+.btn-danger:hover{
+background-color: rgb(235, 3, 3);
+border-color: rgb(7, 7, 7);
+}
+.btn-primary:hover{
+background-color: rgb(3, 38, 235);
+border-color: rgb(7, 7, 7);
+}

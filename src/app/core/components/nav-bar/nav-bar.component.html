@@ -1,0 +1,21 @@
+<nav class="navbar nav-bar-expand-lg navbar-dark bg-dark">
+  <h2  class="navbar-brand"> Courses</h2>
+  <button [routerLink]="['/courses']" routerLinkActive="active"
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-expanded=" false"
+    arial-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSuportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <!-- Aqui para ativar uma rota fou utilizado orouterLinkActive e passando a classe (Active)-->
+        <a [routerLink]="['/courses']" routerLinkActive="active" class="nav-link">Courses</a>
+      </li>
+    </ul>
+  </div>
+</nav>

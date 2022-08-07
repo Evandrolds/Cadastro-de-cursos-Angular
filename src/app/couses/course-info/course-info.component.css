@@ -1,0 +1,12 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.col-sm-1 h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}

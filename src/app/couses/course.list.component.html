@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <h2 class="title">Tecnology Courses</h2>
+  <!-- Classes prontas  do bootstrap -->
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label">Filter By: </label>
+    <div class="col-sm-10">
+      <!-- Aplicando twoway databide [( ngModel)]-->
+      <input [(ngModel)]="filter" class="form-control"placeholder="  Search a course"  />
+    </div>
+  </div>
+  <hr />
+  <table class="table  table-striped">
+    <thead>
+      <tr class="lis-descriptions">
+        <th>Image</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Date Release</th>
+        <th>Workload</th>
+        <th>Start data</th>
+        <th>End data</th>
+        <th>Rating</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <hr />
+    <tbody>
+      <!-- Percorrendo a lista de cursos com for (ngfor) 
+      Para garregar a imagem do src é preciso colocar entre [src] para carregar -->
+      <tr *ngFor="let course of filteredCourses" class="tbl-dados">
+        <td>
+          <img
+            [src]="course.imageUrl"
+            width="40"
+            height="40"
+            alt="image angular"
+          />
+        </td>
+        <!-- Foi utilizado um pype aqui apenas para aprendizado -->
+        <td>{{ course.code }}</td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.price }}</td>
+        <td>{{ course.description }}</td>
+        <!-- Utilizando pypes ==>  | date: ' dd/MM/yyyy ' <== mas não está funcionando -->
+        <td>{{ course.releaseDate }}</td>
+        <td>{{ course.workload }}</td>
+        <td>{{ course.startData }}</td>
+        <td>{{ course.endData }}</td>
+
+        <td>
+          <app-star [rating]="course.rating"></app-star>
+        </td>
+        <td>
+          <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary me-3"
+            >Edit</a
+          >
+          <button (click)="deleteById(course.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
