@@ -1,4 +1,11 @@
-# AngulaProject
+# Angular Project App
+# Instruçoes de execução 
+Para que o app funcione corretamente é necessário executar o servidor back-end em node, pelo linke que está aqui em baixo.
+1 = Crie uma pasta separada da do projeto e coloque o arquivo server dentro , depois pelo seu terminal dê um " npm install" dentro da pasta onde está o arquivo server em javascript para instlar o node, feito isso, digite no seu terminal "node serve" para startar seu servidor.
+2 = Executa o projeto e terá o app funcionando corretamente.
+
+ ## Aquivo server
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
